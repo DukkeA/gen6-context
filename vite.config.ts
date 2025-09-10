@@ -28,7 +28,6 @@ export default defineConfig({
       external: [
         'react',
         'react-dom',
-        'prop-types',
         '@polkadot/api',
         '@polkadot/extension-dapp',
         '@polkadot/ui-keyring',
@@ -39,7 +38,6 @@ export default defineConfig({
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
-          'prop-types': 'PropTypes',
           '@polkadot/api': 'PolkadotApi',
           '@polkadot/extension-dapp': 'PolkadotExtensionDapp',
           '@polkadot/ui-keyring': 'PolkadotKeyring',

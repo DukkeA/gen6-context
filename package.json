@@ -20,6 +20,9 @@
     "dev": "vite build --watch",
     "clean": "rimraf dist",
     "prepublishOnly": "npm run clean && npm run build",
+    "prepack": "npm run build",
+    "typecheck": "tsc --noEmit",
+    "validate": "npm run typecheck && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -31,7 +34,7 @@
     "web3",
     "crypto"
   ],
-  "author": "",
+  "author": "Andrés Duque <andduque.ing@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8.0",
@@ -42,8 +45,7 @@
     "@polkadot/extension-dapp": "^0.47.0",
     "@polkadot/ui-keyring": "^3.6.0",
     "@polkadot/util": "^12.6.0",
-    "@polkadot/types": "^12.0.0",
-    "prop-types": "^15.8.1"
+    "@polkadot/types": "^12.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
@@ -56,10 +58,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/gen6-context.git"
+    "url": "git+https://github.com/DukkeA/gen6-context.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/gen6-context/issues"
+    "url": "https://github.com/DukkeA/gen6-context/issues"
   },
-  "homepage": "https://github.com/your-username/gen6-context#readme"
+  "homepage": "https://github.com/DukkeA/gen6-context#readme",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
 }

@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useReducer } from 'react'
-import PropTypes from 'prop-types'
 import jsonrpc from '@polkadot/types/interfaces/jsonrpc'
 import { ApiPromise, WsProvider } from '@polkadot/api'
 import { web3Accounts, web3Enable } from '@polkadot/extension-dapp'
@@ -145,11 +144,16 @@ const loadAccounts = async (state: SubstrateState, dispatch: React.Dispatch<Subs
 
 const Gen6Context = React.createContext<SubstrateContextValue | null>(null)
 
-const Gen6ContextProvider = (props: any) => {
+export interface Gen6ContextProviderProps {
+  socket?: string
+  children: React.ReactNode
+}
+
+const Gen6ContextProvider: React.FC<Gen6ContextProviderProps> = (props) => {
   const neededPropNames = ['socket']
   neededPropNames.forEach((key) => {
     ;(initialState as any)[key] =
-      typeof props[key] === 'undefined' ? (initialState as any)[key] : props[key]
+      typeof (props as any)[key] === 'undefined' ? (initialState as any)[key] : (props as any)[key]
   })
 
   const [state, dispatch] = useReducer(reducer, initialState)
@@ -190,10 +194,6 @@ const Gen6ContextProvider = (props: any) => {
       {props.children}
     </Gen6Context.Provider>
   )
-}
-
-Gen6ContextProvider.propTypes = {
-  socket: PropTypes.string,
 }
 
 // Hook to use the context state and functions

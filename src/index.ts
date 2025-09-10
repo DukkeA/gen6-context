@@ -5,3 +5,4 @@ export type {
   SubstrateContextValue, 
   UseGen6Return 
 } from './types/substrate'
+export type { Gen6ContextProviderProps } from './gen6Context'

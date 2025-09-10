@@ -1,0 +1,58 @@
+# Source files
+src/
+tsconfig.json
+vite.config.ts
+
+# Development files
+.gitignore
+CLAUDE.md
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# Source files
+src/
+tsconfig.json
+vite.config.ts
+
+# Development files
+.gitignore
+CLAUDE.md
+CONTRIBUTING.md
+*.log
+
+# IDE files
+.vscode/
+.idea/
+
+# Test files
+__tests__/
+*.test.*
+*.spec.*
+
+# Git files
+.git/
+.github/
+
+# Examples (optional - you might want to include these)
+examples/
+
+# CI/CD files
+.github/
+.travis.yml
+.circleci/
+
+# Documentation (keep README.md, LICENSE, CHANGELOG.md)
+docs/
+
+# Development dependencies
+node_modules/
+
+# Environment files
+.env*
+
+# OS files
+.DS_Store
+Thumbs.db
