@@ -1,0 +1,65 @@
+{
+  "name": "gen6-context",
+  "version": "1.0.0",
+  "description": "React Context Provider for Polkadot/Substrate blockchain applications with connection management and account handling",
+  "main": "dist/gen6-context.cjs.js",
+  "module": "dist/gen6-context.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/gen6-context.es.js",
+      "require": "./dist/gen6-context.cjs.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "dev": "vite build --watch",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "polkadot",
+    "substrate",
+    "blockchain",
+    "react",
+    "context",
+    "web3",
+    "crypto"
+  ],
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@polkadot/api": "^12.0.0",
+    "@polkadot/extension-dapp": "^0.47.0",
+    "@polkadot/ui-keyring": "^3.6.0",
+    "@polkadot/util": "^12.6.0",
+    "@polkadot/types": "^12.0.0",
+    "prop-types": "^15.8.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.3.0",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/gen6-context.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/gen6-context/issues"
+  },
+  "homepage": "https://github.com/your-username/gen6-context#readme"
+}
