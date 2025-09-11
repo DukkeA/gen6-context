@@ -1,6 +1,6 @@
 {
   "name": "gen6-context",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "React Context Provider for Polkadot/Substrate blockchain applications with connection management and account handling",
   "main": "dist/gen6-context.cjs.js",
   "module": "dist/gen6-context.es.js",
@@ -38,16 +38,21 @@
   "license": "MIT",
   "peerDependencies": {
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react-dom": ">=16.8.0",
+    "@polkadot/api": ">=10.0.0",
+    "@polkadot/extension-dapp": ">=0.44.0",
+    "@polkadot/ui-keyring": ">=3.0.0",
+    "@polkadot/util": ">=12.0.0",
+    "@polkadot/types": ">=10.0.0"
   },
   "dependencies": {
+  },
+  "devDependencies": {
     "@polkadot/api": "^12.0.0",
     "@polkadot/extension-dapp": "^0.47.0",
     "@polkadot/ui-keyring": "^3.6.0",
     "@polkadot/util": "^12.6.0",
-    "@polkadot/types": "^12.0.0"
-  },
-  "devDependencies": {
+    "@polkadot/types": "^12.0.0",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "@vitejs/plugin-react": "^4.2.0",

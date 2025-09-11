@@ -21,8 +21,16 @@ npm install gen6-context
 Make sure you have the following peer dependencies installed:
 
 ```bash
-npm install react react-dom
+npm install react react-dom @polkadot/api @polkadot/extension-dapp @polkadot/ui-keyring @polkadot/util @polkadot/types
 ```
+
+**Note**: The Polkadot dependencies are marked as peer dependencies to avoid version conflicts. Make sure your application uses compatible versions:
+
+- `@polkadot/api`: >=10.0.0
+- `@polkadot/extension-dapp`: >=0.44.0  
+- `@polkadot/ui-keyring`: >=3.0.0
+- `@polkadot/util`: >=12.0.0
+- `@polkadot/types`: >=10.0.0
 
 ## Usage
 
@@ -95,18 +103,28 @@ function WalletConnect() {
 
 ### Configuration
 
-You can configure the WebSocket provider URL:
+By default, Gen6 Context connects to the Gen6 network node at `wss://gen6.app/node`. You can override this by providing a custom WebSocket URL:
 
 ```tsx
-<Gen6ContextProvider socket="wss://your-node.com">
+<Gen6ContextProvider socket="wss://your-custom-node.com">
   <App />
 </Gen6ContextProvider>
 ```
 
-Or use environment variables:
+#### Default Connection
+```tsx
+// This will connect to wss://gen6.app/node by default
+<Gen6ContextProvider>
+  <App />
+</Gen6ContextProvider>
+```
 
-```bash
-VITE_WSS_PROVIDER=wss://your-node.com
+#### Custom Node Connection
+```tsx
+// Connect to a different Polkadot/Substrate node
+<Gen6ContextProvider socket="wss://rpc.polkadot.io">
+  <App />
+</Gen6ContextProvider>
 ```
 
 ## API Reference
