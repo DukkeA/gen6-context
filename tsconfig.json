@@ -22,7 +22,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    // Ensure compatibility with Node.js module resolution
+    "moduleDetection": "force"
   },
   "include": [
     "src/**/*",

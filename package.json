@@ -1,6 +1,6 @@
 {
   "name": "gen6-context",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React Context Provider for Polkadot/Substrate blockchain applications with connection management and account handling",
   "main": "dist/gen6-context.cjs.js",
   "module": "dist/gen6-context.es.js",
@@ -10,9 +10,9 @@
   ],
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/gen6-context.es.js",
-      "require": "./dist/gen6-context.cjs.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/gen6-context.cjs.js"
     }
   },
   "scripts": {
