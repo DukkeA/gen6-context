@@ -22,6 +22,8 @@ export type SubstrateAction =
   | { type: 'CONNECT'; payload: ApiPromise }
   | { type: 'CONNECT_SUCCESS' }
   | { type: 'CONNECT_ERROR'; payload: Error }
+  | { type: 'DISCONNECT' }
+  | { type: 'UPDATE_SOCKET'; payload: string }
   | { type: 'LOAD_KEYRING' }
   | { type: 'SET_KEYRING'; payload: any }
   | { type: 'KEYRING_ERROR' }
@@ -34,9 +36,11 @@ export interface SubstrateContextValue {
   state: SubstrateState
   setCurrentAccount: (account: InjectedAccountWithMeta | null) => void
   loadAccounts: () => Promise<void>
+  switchNode: (socket: string) => Promise<void>
 }
 
 export interface UseGen6Return extends SubstrateState {
   setCurrentAccount: (account: InjectedAccountWithMeta | null) => void
   loadAccounts: () => Promise<void>
+  switchNode: (socket: string) => Promise<void>
 }
